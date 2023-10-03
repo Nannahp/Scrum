@@ -38,4 +38,14 @@ class Recipe {
     public String getCategory() {
         return category;
     }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void recipeList() {
+        for (Recipe recipe : recipeList) {
+            System.out.println(recipe);
+        }
+    }
 }
