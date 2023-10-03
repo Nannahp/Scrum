@@ -8,11 +8,12 @@ class Recipe {
     private String kategori;
 
     public Recipe(String title, List<String> ingredients, String instructions, String kategori) {
-        this.title = title;
+        this.title = title.toLowerCase();
         this.ingredients = ingredients;
-        this.instructions = instructions;
+        this.instructions = instructions.toLowerCase();
         this.rating = 0; // Initial rating is set to 0
-        this.kategori = kategori;
+        this.kategori = kategori.toLowerCase();
+
     }
 
     public String getTitle() {
