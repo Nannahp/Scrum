@@ -23,6 +23,7 @@ public class Menu {
             switch (choice) {
                 case 1 -> {
                     System.out.println("Enter 1) title, 2) ingredients, 3)Instructions, 4)Category");
+                    in.nextLine();
                     String title = in.nextLine();
                     List<String> ingredients = Collections.singletonList(in.nextLine());
                     String instructions = in.nextLine();
@@ -31,18 +32,17 @@ public class Menu {
                     System.out.println("recipe added");
                 }
                 case 2 -> {
-                   String tilteKey = in.nextLine();
-                   List<Recipe> titleResults = recipeBook.searchByTitle(tilteKey);
-                   recipeBook.displayAllRecipes(titleResults);
+                    recipeBook.displayAllRecipes();
                 }
                 case 3 -> {
+                    System.out.println("Which recipe would you like to delete?");
+                    recipeBook.displayAllRecipes();
+                    in.next();
                     String title = in.nextLine();
                     recipeBook.removeRecipe(title.toLowerCase(Locale.ROOT));
                 }
                 case 4 -> {
-                    String tilteKey = in.nextLine();
-                    List<Recipe> titleResults = recipeBook.searchByTitle(tilteKey);
-                    recipeBook.displayAllRecipes(titleResults);
+                    recipeBook.displayAllRecipes();
                     System.out.println("Which recipe would you like to rate?");
                     in.nextLine(); // scanner bug
                     String title = in.nextLine();

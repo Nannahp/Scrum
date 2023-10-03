@@ -5,14 +5,14 @@ class Recipe {
     private List<String> ingredients;
     private String instructions;
     private int rating;
-    private String category;
+    private String kategori;
 
-    public Recipe(String title, List<String> ingredients, String instructions, String category) {
+    public Recipe(String title, List<String> ingredients, String instructions, String kategori) {
         this.title = title;
         this.ingredients = ingredients;
         this.instructions = instructions;
-        this.category = category;
         this.rating = 0; // Initial rating is set to 0
+        this.kategori = kategori;
     }
 
     public String getTitle() {
@@ -35,17 +35,13 @@ class Recipe {
         this.rating = rating;
     }
 
-    public String getCategory() {
-        return category;
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
     }
 
     public String getKategori() {
         return kategori;
     }
 
-    public void recipeList() {
-        for (Recipe recipe : recipeList) {
-            System.out.println(recipe);
-        }
-    }
 }
